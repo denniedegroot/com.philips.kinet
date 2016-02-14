@@ -1,0 +1,48 @@
+{
+  "id": "com.philips.kinet",
+  "version": "1.0.0",
+  "compatibility": "0.x || 1.x",
+  "category": "lights",
+  "name": {
+    "en": "KiNET",
+    "nl": "KiNET"
+  },
+  "description": {
+    "en": "Give Homey the ability to control your KiNET lights",
+    "nl": "Laat Homey KiNET lampen aansturen"
+  },
+  "author": {
+    "name": "Dennie de Groot"
+  },
+  "images": {
+    "large": "./assets/images/large.jpg",
+    "small": "./assets/images/small.jpg"
+  },
+  "drivers": [{
+    "id": "rgb",
+    "name": {
+      "en": "RGB (3 Channels)",
+      "nl": "RGB (3 Kanaals)"
+    },
+    "images": {
+      "large": "./drivers/rgb/assets/images/large.jpg",
+      "small": "./drivers/rgb/assets/images/small.jpg"
+    },
+    "class": "light",
+    "capabilities": [
+      "onoff", "dim", "light_hue", "light_saturation"
+    ],
+    "pair": [{
+      "id": "start"
+    }, {
+      "id": "list_devices",
+      "template": "list_devices",
+      "navigation": {
+        "next": "add_devices"
+      }
+    }, {
+      "id": "add_devices",
+      "template": "add_devices"
+    }]
+  }]
+}
